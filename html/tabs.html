@@ -6,6 +6,8 @@
 	<script src="../js/tabs.js"></script>
 	<script src="../js/thumbnails.js"></script>
 	<script src="../js/zoomable.js"></script>
+	<script src="../js/name.js"></script>
+	<script src="../js/nameWidget.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset-min.css">
 	<link rel="stylesheet" type="text/css" href="../css/tabs.css">	
@@ -19,6 +21,7 @@
 		<li><a href="#carousel" class="active">Carousel</a></li>
 		<li><a href="#thumbnails">Thumbnails</a></li>
 		<li><a href="#zoomable">Zoomable</a></li>
+		<li><a href="#autocomplete">Auto-Complete</a></li>
 
 	</ul>
 
@@ -77,6 +80,18 @@
 		<section class="tab-pane" id="zoomable" style='width: 500px;'>
 
 			<img src="../images/burger.jpg">
+
+		</section>
+
+		<section class="tab-pane" id="autocomplete">
+			<span class="name-search">
+				<label>
+					Search
+					<input type="text" name="query">
+				</label>
+
+				<ul class="names"></ul>
+			</span>
 
 		</section>
 

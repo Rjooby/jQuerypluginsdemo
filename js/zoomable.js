@@ -4,7 +4,7 @@ $.Zoomable = function (target, options) {
 	this.boxSize = ((options && options.boxSize) || 100);
 
 	this.$target.on('mousemove', this.showFocusBox.bind(this));
-	// this.$target.on('mouseleave', this.removeFocuxBox.bind(this));
+	this.$target.on('mouseleave', this.removeFocuxBox.bind(this));
 };
 
 
@@ -73,7 +73,7 @@ $.Zoomable.prototype.showZoom = function (xDiff, yDiff) {
 	var xDiff = xDiff * ratio; 
 	var yDiff = yDiff * ratio;
 
-	this.$zoom.css('background-position', '-'+ xDiff + 'px -' + yDiff + 'px' );
+ 	this.$zoom.css('background-position', '-'+ xDiff + 'px -' + yDiff + 'px' );
 
 };
 
