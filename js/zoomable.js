@@ -7,10 +7,9 @@ $.Zoomable = function (target, options) {
 	// this.$target.on('mouseleave', this.removeFocuxBox.bind(this));
 };
 
-dfs
+
 $.Zoomable.prototype.showFocusBox = function (event) {
 	if(!this.mousedOver) {
-		console.log('moused')
 		this.mousedOver = true;
 		this.$focusBox = $('<div class="focus-box"></div>');
 		this.$focusBox.css('height', this.boxSize).css('width',this.boxSize);
@@ -26,6 +25,7 @@ $.Zoomable.prototype.showFocusBox = function (event) {
 		this.imgHeight = img.innerHeight();
 	}
 
+	console.log(event.pageY + ":" + this.offsetY)
 	var xDiff = event.pageX - this.offsetX - (this.boxSize / 2);
 	var yDiff = event.pageY - this.offsetY - (this.boxSize / 2);
 	if (xDiff < 0) {
@@ -42,8 +42,6 @@ $.Zoomable.prototype.showFocusBox = function (event) {
 	if (yDiff > this.imgHeight - this.boxSize){
 		yDiff = this.imgHeight - this.boxSize;
 	}
-		// console.log(xDiff);
-		// console.log(yDiff);
 	this.$focusBox.css('left', xDiff).css('top', yDiff);
 
 	this.showZoom(xDiff, yDiff);
@@ -67,14 +65,15 @@ $.Zoomable.prototype.showZoom = function (xDiff, yDiff) {
 		this.$zoom = $('<div class="zoomed-image"></div>');
 		this.$zoom.css('background-image', 'url(' + this.$target.find('img').attr('src') + ')')
 .css('width', this.windowHeight).css('background-size', blowUpScale + '% auto')
+		$('body').append(this.$zoom);	
 
-		$('body').append(this.$zoom); 
 	}
 
 	var ratio = this.windowHeight / this.boxSize;
 	var xDiff = xDiff * ratio; 
 	var yDiff = yDiff * ratio;
-	this.$zoom.css('background-position', '-'+ xDiff + 'px - ' + yDiff + 'px' );
+
+	this.$zoom.css('background-position', '-'+ xDiff + 'px -' + yDiff + 'px' );
 
 };
 
