@@ -1,6 +1,6 @@
-a {
+a, p {
 	color: inherit;
-	font: "Helvetica" sans-serif;
+	font-family: "Helvetica", sans-serif;
 	text-decoration: none;
 }
 
