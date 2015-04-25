@@ -1,0 +1,40 @@
+div.thumbs {
+spanidth: 400px;
+}
+
+span.thumbs div.featured img {
+	width: 100%
+}
+
+span.thumbs div.gutter {
+	position: relative;
+}
+
+span.thumbs div.gutter-images {
+	left: 5%;
+	position: relative;
+	width: 90%;
+}
+
+span.thumbs div.gutter div.gutter-images img {
+	display: block;
+	float: left;
+	width: 20%;
+}
+
+span.thumbs div.gutter a.nav {
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 5%;
+}
+
+span.thumbs div.gutter a.nav-right {
+	left: 95%;
+}
+
+.clearfix {
+	clear: both;
+}

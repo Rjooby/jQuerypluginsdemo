@@ -1,0 +1,34 @@
+
+span.caro {
+	/*position: relative;*/
+	height: 400px;
+	width: 400px;
+}
+
+div.items {
+	position: relative;
+	overflow: hidden;
+
+	height: 100%;
+	width: 100%;
+}
+
+div.items > *:not(.live) {
+	display: none;
+}
+
+div.items > *.live {
+	position: absolute;
+	left: 0%;
+	width: 100%;
+
+	transition: left 500ms linear;
+}
+
+div.items > *.live.left{
+	left: -100%;
+}
+
+div.items > *.live.right{
+	left: 100%;
+}
