@@ -3,17 +3,20 @@ spanidth: 400px;
 }
 
 span.thumbs div.featured img {
-	width: 100%
+	width: 400px;
+	height: 400px;
+	margin: auto;
 }
 
 span.thumbs div.gutter {
 	position: relative;
+	display: block;
 }
 
 span.thumbs div.gutter-images {
-	left: 5%;
+	float:left;
 	position: relative;
-	width: 90%;
+	width: 360px;
 }
 
 span.thumbs div.gutter div.gutter-images img {
@@ -23,12 +26,12 @@ span.thumbs div.gutter div.gutter-images img {
 }
 
 span.thumbs div.gutter a.nav {
-	position: absolute;
+	position: relative;
 	text-align: center;
 	text-decoration: none;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 35%;
 	width: 5%;
+	font-size: 40px;
 }
 
 span.thumbs div.gutter a.nav-right {
